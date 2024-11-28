@@ -5,7 +5,8 @@ from datetime import datetime
 def receive_tcp(sock):
     conn, _ = sock.accept()
     with conn:
-        with open(f"received_tcp.dat{datetime.now().strftime("%Y-%m-%d_%H%M%S")}", 'wb') as f:
+        current_time = datetime.now().strftime("%Y-%m-%d_%H%M%S")
+        with open(f"received_tcp.dat{current_time}", 'wb') as f:
             print("Recebendo dados via TCP...")
             while True:
                 data = conn.recv(4096)
@@ -14,11 +15,12 @@ def receive_tcp(sock):
                 f.write(data)
 
 def receive_udp(sock):
-    with open(f"received_udp.{datetime.now().strftime("%Y-%m-%d_%H%M%S")}", 'wb') as f:
+    current_time = datetime.now().strftime("%Y-%m-%d_%H%M%S")
+    with open(f"received_udp.{current_time}", 'wb') as f:
         print("Recebendo dados via UDP...")
         while True:
             try:
-                sock.settimeout(10)  # Timeout para encerrar a recepção
+                sock.settimeout(1000)  # Timeout para encerrar a recepção
                 data, _ = sock.recvfrom(4096)
                 if not data:
                     break
