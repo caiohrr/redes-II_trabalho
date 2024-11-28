@@ -1,15 +1,35 @@
-# echo-client.py
-
 import socket
+import time
 
-HOST = "127.0.0.1"  # The server's hostname or IP address
-PORT = 65432  # The port used by the server
+def send_tcp(filename, sock):
+    with open(filename, 'rb') as f:
+        print("Enviando dados via TCP...")
+        while chunk := f.read(4096):
+            sock.sendall(chunk)
+    sock.shutdown(socket.SHUT_WR)
 
-with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-    s.connect((HOST, PORT))
-    while True:
-        msg = input("Message to send to server: ")
-        s.sendall(bytes(msg, encoding='utf-8'))
-        print(f"sent {msg}")
-        data = s.recv(1024)
-        print(f"Received {data!r}")
+def send_udp(filename, sock, server_address):
+    with open(filename, 'rb') as f:
+        print("Enviando dados via UDP...")
+        while chunk := f.read(4096):
+            sock.sendto(chunk, server_address)
+
+def send_file(filename, protocol='TCP', port=12345):
+    sock_type = socket.SOCK_STREAM if protocol == 'TCP' else socket.SOCK_DGRAM
+    sock = socket.socket(socket.AF_INET, sock_type)
+
+    if protocol == 'TCP':
+        sock.connect(('127.0.0.1', port))
+        send_tcp(filename, sock)
+    else:
+        server_address = ('127.0.0.1', port)
+        send_udp(filename, sock, server_address)
+
+    sock.close()
+    print(f"Transferência via {protocol} concluída.")
+
+if __name__ == '__main__':
+    filename = input("Digite o nome do arquivo: ").strip()
+    protocol = input("Escolha o protocolo (TCP/UDP): ").strip().upper()
+    send_file(filename, protocol)
+
