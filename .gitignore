@@ -1,0 +1,5 @@
+# Ignora os arquivos de teste
+/arquivos_teste/
+
+# Ignora os arquivos baixados pelo tcp ou udp
+received*
