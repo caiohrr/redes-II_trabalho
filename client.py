@@ -14,15 +14,15 @@ def send_udp(filename, sock, server_address):
         while chunk := f.read(4096):
             sock.sendto(chunk, server_address)
 
-def send_file(filename, protocol='TCP', port=12345):
+def send_file(filename, protocol='TCP', port=12345, ip='127.0.0.1'):
     sock_type = socket.SOCK_STREAM if protocol == 'TCP' else socket.SOCK_DGRAM
     sock = socket.socket(socket.AF_INET, sock_type)
 
     if protocol == 'TCP':
-        sock.connect(('127.0.0.1', port))
+        sock.connect((ip, port))
         send_tcp(filename, sock)
     else:
-        server_address = ('127.0.0.1', port)
+        server_address = (ip, port)
         send_udp(filename, sock, server_address)
 
     sock.close()
@@ -31,5 +31,5 @@ def send_file(filename, protocol='TCP', port=12345):
 if __name__ == '__main__':
     filename = input("Digite o nome do arquivo: ").strip()
     protocol = input("Escolha o protocolo (TCP/UDP): ").strip().upper()
-    send_file(filename, protocol)
+    send_file(filename, protocol, ip='10.254.225.14')
 
