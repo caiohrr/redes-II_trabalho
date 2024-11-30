@@ -2,7 +2,7 @@ import socket
 import time
 from datetime import datetime
 
-LOG_FILE = f"log_tcp_server-{datetime.now().strftime("%H%M%S")}.txt"
+LOG_FILE = f"log_tcp_server-{datetime.now().strftime('%H%M%S')}.txt"
 
 def log(message):
     with open(LOG_FILE, "a") as log_file:

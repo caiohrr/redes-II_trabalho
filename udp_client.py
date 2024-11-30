@@ -2,7 +2,7 @@ import socket
 import time
 from datetime import datetime
 
-LOG_FILE = f"log_udp_client-{datetime.now().strftime("%H%M%S")}.txt"
+LOG_FILE = f"log_udp_client-{datetime.now().strftime('%H%M%S')}.txt"
 
 def log(message):
     with open(LOG_FILE, "a") as log_file:
@@ -18,7 +18,7 @@ def send_udp(filename, sock, server_address):
 
 def send_file(filename):
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    server_address = ('127.0.0.1', 12345)  # Apontando para o servidor
+    server_address = ('10.254.225.12', 12345)  # Apontando para o servidor
     start_time = time.time()
     send_udp(filename, sock, server_address)
     end_time = time.time()
@@ -29,7 +29,7 @@ if __name__ == "__main__":
     files = [
         "arquivo_1MB.txt", "arquivo_10MB.txt", "arquivo_50MB.txt",
         "arquivo_125MB.txt", "arquivo_250MB.txt", "arquivo_500MB.txt",
-        "arquivo_750MB.txt", "arquivo_1GB.txt", "arquivo_1.5GB.txt", "arquivo_2GB.txt"
+        #"arquivo_750MB.txt", "arquivo_1GB.txt", "arquivo_1.5GB.txt", "arquivo_2GB.txt"
     ]
     #files = ["arquivo_1.5GB.txt", "arquivo_2GB.txt"]
     for file in files:

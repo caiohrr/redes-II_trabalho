@@ -1,0 +1,12 @@
+2024-11-30 20:10:28.820984 - Iniciando envio UDP: arquivo_1MB.txt
+2024-11-30 20:10:28.833764 - Transferência UDP concluída em 0.011759 segundos.
+2024-11-30 20:10:28.836169 - Iniciando envio UDP: arquivo_10MB.txt
+2024-11-30 20:10:28.926670 - Transferência UDP concluída em 0.090503 segundos.
+2024-11-30 20:10:28.929331 - Iniciando envio UDP: arquivo_50MB.txt
+2024-11-30 20:10:29.373816 - Transferência UDP concluída em 0.444722 segundos.
+2024-11-30 20:10:29.376919 - Iniciando envio UDP: arquivo_125MB.txt
+2024-11-30 20:10:30.488775 - Transferência UDP concluída em 1.112074 segundos.
+2024-11-30 20:10:30.492442 - Iniciando envio UDP: arquivo_250MB.txt
+2024-11-30 20:10:32.719606 - Transferência UDP concluída em 2.227371 segundos.
+2024-11-30 20:10:32.723571 - Iniciando envio UDP: arquivo_500MB.txt
+2024-11-30 20:10:37.179964 - Transferência UDP concluída em 4.456618 segundos.

@@ -1,0 +1,19 @@
+2024-11-30 20:10:21.341087 - Servidor ouvindo UDP na porta 12345
+2024-11-30 20:10:28.821329 - Iniciando recebimento UDP: arquivo_1MB.txt
+2024-11-30 20:10:28.832966 - Fim da recepção UDP para arquivo_1MB.txt.
+2024-11-30 20:10:28.835122 - Transferência UDP concluída em 0.011538 segundos. Tamanho recebido: 1048576 bytes.
+2024-11-30 20:10:28.874763 - Iniciando recebimento UDP: arquivo_10MB.txt
+2024-11-30 20:10:28.927272 - Fim da recepção UDP para arquivo_10MB.txt.
+2024-11-30 20:10:28.929379 - Transferência UDP concluída em 0.052490 segundos. Tamanho recebido: 5484544 bytes.
+2024-11-30 20:10:29.006567 - Iniciando recebimento UDP: arquivo_50MB.txt
+2024-11-30 20:10:29.374314 - Fim da recepção UDP para arquivo_50MB.txt.
+2024-11-30 20:10:29.376409 - Transferência UDP concluída em 0.367651 segundos. Tamanho recebido: 42582016 bytes.
+2024-11-30 20:10:29.834573 - Iniciando recebimento UDP: arquivo_125MB.txt
+2024-11-30 20:10:30.489238 - Fim da recepção UDP para arquivo_125MB.txt.
+2024-11-30 20:10:30.491247 - Transferência UDP concluída em 0.654557 segundos. Tamanho recebido: 76836864 bytes.
+2024-11-30 20:10:31.213309 - Iniciando recebimento UDP: arquivo_250MB.txt
+2024-11-30 20:10:32.719616 - Fim da recepção UDP para arquivo_250MB.txt.
+2024-11-30 20:10:32.722325 - Transferência UDP concluída em 1.506480 segundos. Tamanho recebido: 175960064 bytes.
+2024-11-30 20:10:34.360326 - Iniciando recebimento UDP: arquivo_500MB.txt
+2024-11-30 20:10:37.179640 - Fim da recepção UDP para arquivo_500MB.txt.
+2024-11-30 20:10:37.181628 - Transferência UDP concluída em 2.819222 segundos. Tamanho recebido: 329625600 bytes.

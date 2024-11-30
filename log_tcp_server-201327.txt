@@ -1,0 +1,13 @@
+2024-11-30 20:13:27.722553 - Servidor ouvindo TCP na porta 12345
+2024-11-30 20:13:32.600795 - Iniciando recebimento TCP: arquivo_1MB.txt-TCP_2024-11-30_201332.bin
+2024-11-30 20:13:32.756248 - Transferência TCP concluída em 0.110680 segundos. Tamanho recebido: 1048576 bytes.
+2024-11-30 20:13:32.765561 - Iniciando recebimento TCP: arquivo_10MB.txt-TCP_2024-11-30_201332.bin
+2024-11-30 20:13:33.097129 - Transferência TCP concluída em 0.194250 segundos. Tamanho recebido: 10485760 bytes.
+2024-11-30 20:13:33.104848 - Iniciando recebimento TCP: arquivo_50MB.txt-TCP_2024-11-30_201333.bin
+2024-11-30 20:13:34.182623 - Transferência TCP concluída em 0.552688 segundos. Tamanho recebido: 52428800 bytes.
+2024-11-30 20:13:34.188860 - Iniciando recebimento TCP: arquivo_125MB.txt-TCP_2024-11-30_201334.bin
+2024-11-30 20:13:36.666465 - Transferência TCP concluída em 1.227119 segundos. Tamanho recebido: 131072000 bytes.
+2024-11-30 20:13:36.673117 - Iniciando recebimento TCP: arquivo_250MB.txt-TCP_2024-11-30_201336.bin
+2024-11-30 20:13:41.426754 - Transferência TCP concluída em 2.348800 segundos. Tamanho recebido: 262144000 bytes.
+2024-11-30 20:13:41.434063 - Iniciando recebimento TCP: arquivo_500MB.txt-TCP_2024-11-30_201341.bin
+2024-11-30 20:13:50.832597 - Transferência TCP concluída em 4.592278 segundos. Tamanho recebido: 524288000 bytes.

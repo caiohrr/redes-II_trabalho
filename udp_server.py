@@ -2,7 +2,7 @@ import socket
 import time
 from datetime import datetime
 
-LOG_FILE = f"log_udp_server-{datetime.now().strftime("%H%M%S")}.txt"
+LOG_FILE = f"log_udp_server-{datetime.now().strftime('%H%M%S')}.txt"
 
 def log(message):
     with open(LOG_FILE, "a") as log_file:
@@ -15,6 +15,7 @@ def receive_udp(sock):
         current_time = datetime.now().strftime("%Y-%m-%d_%H%M%S")
         data, addr = sock.recvfrom(4096)
         filename = data.decode().replace("FILENAME:", "").strip()
+        #filename = f"arquivo{datetime.now().strftime('%M%S')}" 
 
         with open(f"{filename}-UDP_{current_time}.bin", 'wb') as f:
             log(f"Iniciando recebimento UDP: {filename}")

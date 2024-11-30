@@ -1,0 +1,12 @@
+2024-11-30 20:13:32.700883 - Iniciando envio TCP: arquivo_1MB.txt
+2024-11-30 20:13:32.761664 - Transferência TCP concluída em 0.159080 segundos.
+2024-11-30 20:13:32.866299 - Iniciando envio TCP: arquivo_10MB.txt
+2024-11-30 20:13:33.100918 - Transferência TCP concluída em 0.335122 segundos.
+2024-11-30 20:13:33.205399 - Iniciando envio TCP: arquivo_50MB.txt
+2024-11-30 20:13:34.185570 - Transferência TCP concluída em 1.080642 segundos.
+2024-11-30 20:13:34.289688 - Iniciando envio TCP: arquivo_125MB.txt
+2024-11-30 20:13:36.669943 - Transferência TCP concluída em 2.480795 segundos.
+2024-11-30 20:13:36.773814 - Iniciando envio TCP: arquivo_250MB.txt
+2024-11-30 20:13:41.430641 - Transferência TCP concluída em 4.757191 segundos.
+2024-11-30 20:13:41.534819 - Iniciando envio TCP: arquivo_500MB.txt
+2024-11-30 20:13:50.835817 - Transferência TCP concluída em 9.401538 segundos.

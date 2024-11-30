@@ -2,7 +2,7 @@ import socket
 import time
 from datetime import datetime
 
-LOG_FILE = f"log_tcp_client-{datetime.now().strftime("%H%M%S")}.txt"
+LOG_FILE = f"log_tcp_client-{datetime.now().strftime('%H%M%S')}.txt"
 
 def log(message):
     with open(LOG_FILE, "a") as log_file:
@@ -20,7 +20,7 @@ def send_tcp(filename, sock):
 
 def send_file(filename):
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    sock.connect(('127.0.0.1', 12345))  # Connect to the server
+    sock.connect(('10.254.225.12', 12345))  # Connect to the server
     start_time = time.time()
     
     send_tcp(filename, sock)
@@ -42,7 +42,7 @@ if __name__ == "__main__":
     files = [
         "arquivo_1MB.txt", "arquivo_10MB.txt", "arquivo_50MB.txt",
         "arquivo_125MB.txt", "arquivo_250MB.txt", "arquivo_500MB.txt",
-        "arquivo_750MB.txt", "arquivo_1GB.txt", "arquivo_1.5GB.txt", "arquivo_2GB.txt"
+        #"arquivo_750MB.txt", "arquivo_1GB.txt", "arquivo_1.5GB.txt", "arquivo_2GB.txt"
     ]
     for file in files:
         send_file(file)
